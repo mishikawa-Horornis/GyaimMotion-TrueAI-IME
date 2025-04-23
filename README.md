@@ -17,6 +17,14 @@ ChatGPTを用いたAIによるカスタムIMEを作成する。
 
 - 今後の予定（GUI対応、キャラ追加など）
 
+## 開発に参加したい方へ
+
+- Issueを確認してください
+- `/gpt` コマンドは `inputcontroller.rb` に実装されています
+- キャラ設定は `lib/gyaim/persona.rb` にて管理しています
+
+お気軽にPRください！
+
 ## 下記をフォークしました
 
 <h1>GyaimMotion - RubyMotionで作ったMacのIME</h1>
