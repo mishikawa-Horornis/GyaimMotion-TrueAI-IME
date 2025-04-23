@@ -18,7 +18,7 @@ class AppDelegate
     end
   end
 
-  def candidates_for(input)
+  def candidatesFor(input)
     if input.start_with?("/gpt ")
       char, message = parse_input(input)
       response = ChatGPT.query(char, message)
@@ -27,5 +27,9 @@ class AppDelegate
       # 通常の変換処理
       return [["通常変換（仮）", "標準変換処理"]]
     end
+  end
+  def parse_input(input)
+    _, char, *rest = input.split(" ")
+    [char, rest.join(" ")]
   end
 end
