@@ -7,9 +7,7 @@
 #
 class AppDelegate
   def applicationDidFinishLaunching(notification)
-    #
-    # IMKServerに接続
-    #
+
     identifier = NSBundle.mainBundle.bundleIdentifier
     server = IMKServer.alloc.initWithName("Gyaim_Connection",bundleIdentifier:identifier)
     Thread.new do
@@ -19,6 +17,15 @@ class AppDelegate
       end
     end
   end
-end
-    
 
+  def candidates_for(input)
+    if input.start_with?("/gpt ")
+      char, message = parse_input(input)
+      response = ChatGPT.query(char, message)
+      return [[response, "ChatGPT（#{char}風）"]]
+    else
+      # 通常の変換処理
+      return [["通常変換（仮）", "標準変換処理"]]
+    end
+  end
+end
