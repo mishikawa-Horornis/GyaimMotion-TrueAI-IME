@@ -1,3 +1,8 @@
+# 概要
+ChatGPTを用いたAIによるカスタムIMEを作成する。
+
+## 下記をフォークしました
+
 <h1>GyaimMotion - RubyMotionで作ったMacのIME</h1>
 
 <img src="https://gyazo.com/648245adc6252b716db7af9f7b2022ab.gif">
