@@ -1,2 +1,2 @@
+# .env の中身は以下のようにしてください：
 OPENAI_API_KEY="sk-xxxxxxxxxxx"
-  
